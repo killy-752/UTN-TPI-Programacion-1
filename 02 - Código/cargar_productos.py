@@ -4,7 +4,6 @@ inventario=[]
 
 def cargar_productos(inventario):
 
-
     while True:
 
         cantidad_productos = input("Ingrese la cantidad de productos a cargar (debe ser mayor a cero) :")
@@ -27,7 +26,9 @@ def cargar_productos(inventario):
                 
                 try:
                     herramienta=input(f"Ingrese el nombre de herramienta {n+1}:")
-                    print(inventario)
+                    
+                    if herramienta=="":
+                        raise NameError
 
                     for posicion in range(len(inventario)):
                         print("pos",posicion)
@@ -37,15 +38,24 @@ def cargar_productos(inventario):
                 except ValueError:
                     print("El producto ya está ingresado en el sistema. Intente nuevamente.")
                     continue
+                except NameError:
+                    print("Nombre inválido. No puede estar vacío. Intente nuevamente.")
+                    continue
+
+
                 
                 herramienta_valida=True
 
-            herramienta_stock=input(f"Ingrese la cantidad de {herramienta} en stock.")
+            while True:
+                herramienta_stock=input(f"Ingrese la cantidad de {herramienta} en stock.")
+                herramienta_stock=validar(herramienta_stock,True)
+                if not herramienta_stock:
+                    continue
+                else:
+                    herramienta_stock=0
+                    break
             inventario[len(inventario)-1]=({'herramienta': herramienta, 'cantidad': herramienta_stock})
-
-        
         return inventario
-
 cargar_productos(inventario)
 print(inventario)
         
