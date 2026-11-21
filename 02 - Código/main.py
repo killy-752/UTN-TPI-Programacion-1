@@ -1,15 +1,17 @@
 
 from cargar_productos import cargar_productos
 from validacion import validar_eleccion_menu
+from visualizacion import visualizar
+
 
 #Software de inventario.
 
 #Bucle Main
 
+inventario=[]
+
 while True:
 
-    inventario = []
-    eleccion=0
 
     texto_menu = "Bienvenido al softare de inventario para ferreterías MaFlo \n Ingrese la opción deseada: \n" \
     "[1]. Cargar productos. \n" \
@@ -27,8 +29,11 @@ while True:
         case 0:
             continue
         case 1:
-                try:
-                    inventario=cargar_productos(inventario)
-                except:
-                    continue
+            try:
+                inventario=cargar_productos(inventario)
+            except:
+                continue
+        case 2:
+            visualizar(inventario)
+              
 

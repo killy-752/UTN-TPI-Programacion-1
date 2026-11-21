@@ -31,8 +31,8 @@ def cargar_productos(inventario):
                         raise NameError
 
                     for posicion in range(len(inventario)):
-                        print("pos",posicion)
-                        print(len(inventario))
+                        # print("pos",posicion)
+                        # print(len(inventario))
                         if herramienta in inventario[posicion].values():
                             raise ValueError
                 except ValueError:
@@ -49,14 +49,16 @@ def cargar_productos(inventario):
             while True:
                 herramienta_stock=input(f"Ingrese la cantidad de {herramienta} en stock.")
                 herramienta_stock=validar(herramienta_stock,True)
-                if not herramienta_stock:
+                if type(herramienta_stock) == None:
                     continue
                 else:
-                    herramienta_stock=0
                     break
+             
             inventario[len(inventario)-1]=({'herramienta': herramienta, 'cantidad': herramienta_stock})
+            print(inventario)   
+
         return inventario
 cargar_productos(inventario)
-print(inventario)
+
         
 

@@ -4,10 +4,13 @@ def validacion_enteros_positivos(n,bool):
     try:
         n = int(n)
 
-        if n >= 0 and bool:
+        if n == 0 and bool:
             return True
 
         if n <= 0 and not bool:
+            raise ValueError("Su número es incorrecto. Ingrese un número mayor a cero.")
+
+        if n <=0 and bool:
             raise ValueError("Su número es incorrecto. Ingrese un número mayor a cero.")
         
         return n
