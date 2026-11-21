@@ -1,4 +1,6 @@
 def reportar_agotados(inventario):
+    """Muestra las herramientas con stock 0. Informa si el inventario está vacío
+    o si ninguna herramienta está agotada."""
     hay_productos_sin_stock = False
 
     if len(inventario) == 0:
@@ -6,6 +8,7 @@ def reportar_agotados(inventario):
 
     for producto in inventario:
         if producto["cantidad"] == 0:
+            # Imprime el encabezado solo antes del primer agotado
             if not hay_productos_sin_stock:
                 print("========Productos agotados=========")
 
