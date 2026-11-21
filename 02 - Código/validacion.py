@@ -16,6 +16,7 @@ def validacion_enteros_positivos(n,bool):
         print("Ha ingresado un valor incorrecto. Intente nuevamente.")
 
 def validar_eleccion_menu(numero):
+    """Función para validar la elección en el menú principal."""
     try:
         numero=int(numero)
         return numero
