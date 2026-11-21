@@ -1,6 +1,6 @@
 from validacion import validacion_enteros_positivos as validar
 
-inventario=[]
+# inventario=[]
 
 def cargar_productos(inventario):
 
@@ -58,7 +58,7 @@ def cargar_productos(inventario):
             print(inventario)   
 
         return inventario
-cargar_productos(inventario)
+# cargar_productos(inventario)
 
         
 
