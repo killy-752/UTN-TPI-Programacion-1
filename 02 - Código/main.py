@@ -44,6 +44,3 @@ while True:
                 raise ValueError   
     except ValueError:
         print("La opción ingresada está fuera del rango permitido. Intente nuevamente. \n")
-
-              
-

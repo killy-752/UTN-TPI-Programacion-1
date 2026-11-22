@@ -24,7 +24,7 @@ def consultar_stock(inventario):
             print("La herramienta seleccionada no está ingresada en el sistema.")
 
     else:
-        print("===== No hay herramientas cargadas en el sistema. =====")
+        print("===== No hay herramientas cargadas en el sistema. ===== \n")
 
 # consultar_stock(inventario)
         
