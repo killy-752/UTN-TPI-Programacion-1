@@ -10,10 +10,10 @@ Trabajo Práctico Integrador de Programación I, Tecnicatura Universitaria en Pr
 
 Requiere Python 3.10 o superior.
 
-    cd "02 - Código"
+    cd 02_codigo
     python3 main.py
 
 ## Estructura
 
-- `01 - Documentación/`: diagrama de flujo e informe.
-- `02 - Código/`: código del programa. `main.py` es el archivo que lo inicia.
+- `01_documentacion/`: diagrama de flujo e informe.
+- `02_codigo/`: código del programa. `main.py` es el archivo que lo inicia.
