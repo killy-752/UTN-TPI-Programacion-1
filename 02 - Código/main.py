@@ -2,6 +2,7 @@
 from cargar_productos import cargar_productos
 from validacion import validar_eleccion_menu
 from visualizacion import visualizar
+from consultar_stock import consultar_stock
 
 
 #Software de inventario.
@@ -35,5 +36,8 @@ while True:
                 continue
         case 2:
             visualizar(inventario)
+        case 3:
+            consultar_stock(inventario)
+
               
 
