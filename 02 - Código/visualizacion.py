@@ -6,5 +6,5 @@ def visualizar(inventario):
             for key , value in inventario[posicion].items():
                 print(f"{key}:" , str(value).title())
     else:
-        print("===== No hay herramientas cargadas en el sistema. =====")
+        print("===== No hay herramientas cargadas en el sistema. ===== \n")
         

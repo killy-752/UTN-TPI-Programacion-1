@@ -17,7 +17,7 @@ def main():
     while True:
 
         texto_menu = (
-            "Bienvenido al software de inventario para ferreterías MarFlo \n Ingrese la opción deseada: \n"
+            "Bienvenido al software de inventario para ferreterías MarFlo \n Ingrese la opción deseada: \n \n"
             "[1]. Cargar productos. \n"
             "[2]. Visualización. \n"
             "[3]. Consulta de stock. \n"
