@@ -1,7 +1,5 @@
 from validacion import validacion_enteros_positivos as validar
 
-# inventario=[]
-
 def cargar_productos(inventario):
 
     while True:
@@ -31,8 +29,6 @@ def cargar_productos(inventario):
                         raise NameError
 
                     for posicion in range(len(inventario)):
-                        # print("pos",posicion)
-                        # print(len(inventario))
                         if herramienta in inventario[posicion].values():
                             raise ValueError
                 except ValueError:
@@ -58,7 +54,3 @@ def cargar_productos(inventario):
             print(inventario)   
 
         return inventario
-# cargar_productos(inventario)
-
-        
-
