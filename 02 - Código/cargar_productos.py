@@ -25,7 +25,7 @@ def cargar_productos(inventario):
             while not herramienta_valida:
                 
                 try:
-                    herramienta=input(f"Ingrese el nombre de herramienta {n+1}:")
+                    herramienta=input(f"Ingrese el nombre de herramienta {n+1}:").strip().lower()
                     
                     if herramienta=="":
                         raise NameError

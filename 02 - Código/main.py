@@ -14,7 +14,7 @@ inventario=[]
 while True:
 
 
-    texto_menu = "Bienvenido al softare de inventario para ferreterías MaFlo \n Ingrese la opción deseada: \n" \
+    texto_menu = "Bienvenido al softare de inventario para ferreterías MarFlo \n Ingrese la opción deseada: \n" \
     "[1]. Cargar productos. \n" \
     "[2]. Visualización. \n" \
     "[3]. Consulta de stock. \n" \
@@ -26,18 +26,24 @@ while True:
     eleccion=input(texto_menu)
     eleccion=validar_eleccion_menu(eleccion)
 
-    match eleccion:
-        case 0:
-            continue
-        case 1:
-            try:
-                inventario=cargar_productos(inventario)
-            except:
-                continue
-        case 2:
-            visualizar(inventario)
-        case 3:
-            consultar_stock(inventario)
+    try:
+        match eleccion:
+            case 1:
+                try:
+                    inventario=cargar_productos(inventario)
+                except:
+                    continue
+            case 2:
+                visualizar(inventario)
+            case 3:
+                consultar_stock(inventario)
+            case 7:
+                print("Gracias por utilizar el servicio de seguimiento MarFlo 1.0. ¡Buenos días!")
+                input()
+            case _:
+                raise ValueError   
+    except ValueError:
+        print("La opción ingresada está fuera del rango permitido. Intente nuevamente. \n")
 
               
 
