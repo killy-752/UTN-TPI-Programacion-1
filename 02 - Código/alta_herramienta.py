@@ -1,4 +1,4 @@
-def dar_de_alta_herramienta(inventario):
+def alta_herramienta(inventario):
     """Pide nombre y stock inicial y agrega la herramienta al final del inventario.
     Si un dato es inválido lanza ValueError, que captura main() para volver al menú."""
     nombre_nueva_herramienta = input("Ingrese el nombre de la herramienta que desea agregar al inventario: ").strip()
