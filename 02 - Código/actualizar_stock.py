@@ -1,4 +1,7 @@
 def actualizar_stock(inventario):
+    """Registra una venta (resta unidades) o un ingreso (suma unidades) de una herramienta existente.
+    Si el inventario está vacío, la herramienta no existe o el movimiento es inválido, lo informa.
+    Si un dato es inválido o la venta supera el stock, lanza ValueError, que captura main()."""
     fue_herramienta_encontrada = False
     herramienta_encontrada = None
 
@@ -14,6 +17,8 @@ def actualizar_stock(inventario):
     for herramienta in inventario:
         if herramienta["herramienta"].lower() == nombre_herramienta.lower():
             fue_herramienta_encontrada = True
+            # Apunta al diccionario que ya está en inventario (no es una copia),
+            # así que modificar su 'cantidad' actualiza el inventario directamente
             herramienta_encontrada = herramienta
 
     if not fue_herramienta_encontrada:
