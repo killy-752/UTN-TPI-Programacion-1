@@ -11,7 +11,7 @@ def validacion_enteros_positivos(n, es_booleano):
             raise ValueError("Su número es incorrecto. Ingrese un número mayor a cero.")
 
         if n <= 0 and es_booleano:
-            raise ValueError("Su número es incorrecto. Ingrese un número mayor a cero.")
+            raise ValueError("Su número es incorrecto. Ingrese un número mayor o igual a cero.")
 
         return n
 
