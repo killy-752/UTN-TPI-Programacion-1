@@ -18,7 +18,7 @@ def consultar_stock(inventario):
         for posicion in range(len(inventario)):
             if inventario[posicion]["herramienta"] == eleccion:
                 herramienta_existente=True
-                print(f"El stock de {str(eleccion).title()} es de {inventario[posicion]["cantidad"]} unidades.")
+                print(f"El stock de {str(eleccion).title()} es de {inventario[posicion]['cantidad']} unidades.")
 
         if not herramienta_existente:
             print("La herramienta seleccionada no está ingresada en el sistema.")
