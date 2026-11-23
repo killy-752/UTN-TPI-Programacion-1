@@ -4,7 +4,7 @@ def reportar_agotados(inventario):
     hay_productos_sin_stock = False
 
     if len(inventario) == 0:
-        print("No hay productos en el inventario.")
+        print("No hay productos en el inventario.\n")
 
     for producto in inventario:
         if producto["cantidad"] == 0:
@@ -16,4 +16,4 @@ def reportar_agotados(inventario):
             print(producto["herramienta"])
 
     if len(inventario) > 0 and not hay_productos_sin_stock:
-        print("No hay productos agotados.")
+        print("No hay productos agotados.\n")
