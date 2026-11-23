@@ -50,7 +50,6 @@ def cargar_productos(inventario):
                 else:
                     break
              
-            inventario[len(inventario)-1]=({'herramienta': herramienta, 'cantidad': herramienta_stock})
-            print(inventario)   
+            inventario[len(inventario)-1]=({'herramienta': herramienta, 'cantidad': herramienta_stock}) 
 
         return inventario
