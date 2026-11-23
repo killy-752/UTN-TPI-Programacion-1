@@ -8,15 +8,16 @@ def validacion_enteros_positivos(n, es_booleano):
             return True
 
         if n <= 0 and not es_booleano:
-            raise ValueError("Su número es incorrecto. Ingrese un número mayor a cero.")
+            raise ValueError("Su número es incorrecto. Ingrese un número mayor a cero.\n")
 
-        if n <= 0 and es_booleano:
-            raise ValueError("Su número es incorrecto. Ingrese un número mayor o igual a cero.")
+        if n < 0 and es_booleano:
+            raise ValueError("Su número es incorrecto. Ingrese un número mayor o igual a cero.\n")
 
         return n
 
     except ValueError as e:
         print(e)
+        return None
 
 def validar_eleccion_menu(numero):
     """Función para validar la elección en el menú principal."""
@@ -25,5 +26,5 @@ def validar_eleccion_menu(numero):
         return numero
     except ValueError:
         numero=0
-        print("Ha ingresado un valor no válido. Intente nuevamente.")
+        print("Ha ingresado un valor no válido. Intente nuevamente.\n")
         return 0

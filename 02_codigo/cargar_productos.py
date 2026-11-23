@@ -45,7 +45,7 @@ def cargar_productos(inventario):
             while True:
                 herramienta_stock=input(f"Ingrese la cantidad de {herramienta} en stock.")
                 herramienta_stock=validar(herramienta_stock,True)
-                if type(herramienta_stock) == None:
+                if herramienta_stock is None:
                     continue
                 else:
                     break
