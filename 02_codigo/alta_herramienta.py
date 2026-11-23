@@ -16,3 +16,5 @@ def alta_herramienta(inventario):
         raise ValueError("El stock no puede ser negativo. \n")
 
     inventario.append({'herramienta': nombre_nueva_herramienta, 'cantidad': cantidad_nueva_herramienta})
+
+    print(f"Herramienta {nombre_nueva_herramienta} agregada con {cantidad_nueva_herramienta} unidades.")
