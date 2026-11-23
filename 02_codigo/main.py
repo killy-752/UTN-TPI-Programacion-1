@@ -32,10 +32,7 @@ def main():
         try:
             match eleccion:
                 case 1:
-                    try:
-                        inventario = cargar_productos(inventario)
-                    except:
-                        continue
+                    inventario = cargar_productos(inventario)
                 case 2:
                     visualizar(inventario)
                 case 3:
@@ -51,7 +48,7 @@ def main():
                     break
                 case _:
                     raise ValueError("La opción ingresada está fuera del rango permitido. Intente nuevamente.")
-        except ValueError as e:
+        except Exception as e:
             print(f"Error: {e}")
 
 # Punto de entrada donde inicia el programa
