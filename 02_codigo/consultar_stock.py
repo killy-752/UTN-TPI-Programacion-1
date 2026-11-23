@@ -7,7 +7,7 @@ def consultar_stock(inventario):
         herramienta_existente=False
 
         print("Búsqueda de stock por nombre:")
-        eleccion = input("Ingrese la herramienta a visualizar:").strip()
+        eleccion = str(input("Ingrese la herramienta a visualizar:")).strip().lower()
         
         try:
             if eleccion == "":
